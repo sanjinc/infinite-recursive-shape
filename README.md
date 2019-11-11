@@ -13,4 +13,3 @@ The approach taken generates one quarter of the result (top left) which is then 
 - GUI (form)
 - Validations
 - Unit testing
-- Documentation
