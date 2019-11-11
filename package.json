@@ -1,0 +1,9 @@
+{
+  "name": "infinite-recursive-shape",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/sanjinc/infinite-recursive-shape.git",
+  "author": "Sanjin Celeski <celeski.sanjin@gmail.com>",
+  "license": "MIT",
+  "private": true
+}
