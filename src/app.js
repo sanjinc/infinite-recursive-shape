@@ -1,9 +1,10 @@
 /**
  * Returns matrix.
  * Creates empty matrix, populates first quadrant and applies pattern to other quadrants.
- * @param {number} width
- * @param {number} height
- * @param {number} padd
+ * @param {number} width Matrix width
+ * @param {number} height Matrix height
+ * @param {number} padd Padding between shapes
+ * @returns {array}
  */
 exports.draw = function(width, height, padd) {
   const emptyMark = 0;
@@ -37,7 +38,7 @@ function createEmptyMatrix(width, height, mark) {
 
 /**
  * Returns all corners in first matrix quadrant.
- * @param {number} maxLength
+ * @param {number} maxLength Max length to generate corners
  * @param {number} padd Spacing between shapes
  * @returns {array}
  */
@@ -57,8 +58,8 @@ function getCorners(maxLength, padd) {
 
 /**
  * Returns index of next shape corner.
- * @param {number} pos
- * @param {array} padd
+ * @param {number} pos Current corner position
+ * @param {array} padd Padding between next corner
  * @returns {number}
  */
 function calcNextCorner(pos, padd) {
@@ -67,10 +68,10 @@ function calcNextCorner(pos, padd) {
 
 /**
  * Returns matrix with first quadrant filled with identifiers.
- * @param {array} matrixRef
- * @param {array} cornersRef
- * @param {number} width
- * @param {number} height
+ * @param {array} matrixRef Matrix
+ * @param {array} cornersRef Corners
+ * @param {number} width Width of first quadrant (half width of matrix)
+ * @param {number} height Height of first quadrant (half height of matrix)
  * @returns {array}
  */
 function fillPatternInFirstQuadrant(matrixRef, cornersRef, width, height) {
@@ -86,10 +87,10 @@ function fillPatternInFirstQuadrant(matrixRef, cornersRef, width, height) {
 
 /**
  * Returns matrix with new vertical line added.
- * @param {array} matrixRef
- * @param {number} posStart
- * @param {number} posEnd
- * @param {number} mark
+ * @param {array} matrixRef Matrix
+ * @param {number} posStart Starting positon
+ * @param {number} posEnd End position
+ * @param {number} mark Symbol used to draw line
  * @returns {array}
  */
 function addVerticalLine(matrixRef, posStart, posEnd, mark) {
@@ -102,10 +103,10 @@ function addVerticalLine(matrixRef, posStart, posEnd, mark) {
 
 /**
  * Returns matrix with new horizontal line added.
- * @param {array} matrixRef
- * @param {number} posStart
- * @param {number} posEnd
- * @param {number} mark
+ * @param {array} matrixRef Matrix
+ * @param {number} posStart Starting positon
+ * @param {number} posEnd End position
+ * @param {number} mark Symbol used to draw line
  * @returns {array}
  */
 function addHorizontalLine(matrixRef, posStart, posEnd, mark) {
@@ -119,7 +120,7 @@ function addHorizontalLine(matrixRef, posStart, posEnd, mark) {
 /**
  * Returns matrix filled with shape identifiers.
  * Mirrors pattern from top left quadrant to other three.
- * @param {array} matrixRef
+ * @param {array} matrixRef Matrix
  * @returns {array}
  */
 function applyPatternToOtherQuadrants(matrixRef) {
@@ -139,8 +140,7 @@ function applyPatternToOtherQuadrants(matrixRef) {
 
 /**
  * Returns matrix art as multiline string.
- * @param {array} matrixRef
- * @param {array} artRef
+ * @param {array} matrixRef Matrix
  * @returns {string}
  */
 exports.applyMatrixArt = function(matrixRef) {
@@ -157,8 +157,8 @@ exports.applyMatrixArt = function(matrixRef) {
 
 /**
  * Displays matrix art on DOM element.
- * @param {string} domSelector
- * @param {array} matrixArt
+ * @param {string} domSelector DOM element
+ * @param {array} matrixArt Matrix
  */
 exports.displayMatrix = function(domSelector, matrixArt) {
   const canvas = document.querySelector(domSelector);
@@ -167,7 +167,7 @@ exports.displayMatrix = function(domSelector, matrixArt) {
 
 /**
  * Returns copy of two dimensional array
- * @param {array} matrixRef
+ * @param {array} matrixRef Matrix
  * @returns {array}
  */
 function deepCopyMatrix(matrixRef) {

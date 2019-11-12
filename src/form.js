@@ -1,6 +1,6 @@
 /**
  * Checks if form has valid data.
- * @param {object} formData
+ * @param {object} formData Form data
  * @returns {object}
  */
 exports.validateForm = function(formData) {
@@ -28,9 +28,9 @@ exports.validateForm = function(formData) {
 
 /**
  * Returns if provided field is valid.
- * @param {string} typeNum
- * @param {number} setNum
- * @param {number} minNum
+ * @param {string} typeNum Field name
+ * @param {number} setNum Number to test
+ * @param {number} minNum Minimum number allowed
  * @returns {boolean}
  */
 function validateNumber(typeNum, setNum, minNum) {
