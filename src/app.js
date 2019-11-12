@@ -29,7 +29,7 @@ exports.draw = function(width, height, padd) {
  */
 function createEmptyMatrix(width, height, mark) {
   const matrix = [];
-  for (i = 0; i < height; i++) {
+  for (let i = 0; i < height; i++) {
     matrix.push(new Array(width).fill(mark));
   }
   return matrix;
@@ -94,7 +94,7 @@ function fillPatternInFirstQuadrant(matrixRef, cornersRef, width, height) {
  */
 function addVerticalLine(matrixRef, posStart, posEnd, mark) {
   let matrix = deepCopyMatrix(matrixRef);
-  for (i = posStart; i < posEnd; i++) {
+  for (let i = posStart; i < posEnd; i++) {
     matrix[i][posStart] = mark;
   }
   return matrix;
@@ -110,7 +110,7 @@ function addVerticalLine(matrixRef, posStart, posEnd, mark) {
  */
 function addHorizontalLine(matrixRef, posStart, posEnd, mark) {
   let matrix = deepCopyMatrix(matrixRef);
-  for (i = posStart; i < posEnd; i++) {
+  for (let i = posStart; i < posEnd; i++) {
     matrix[posStart][i] = mark;
   }
   return matrix;
