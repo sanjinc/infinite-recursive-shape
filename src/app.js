@@ -7,8 +7,7 @@
  * @returns {array}
  */
 exports.draw = function(width, height, padd) {
-  const emptyMark = 0;
-  const emptyMatrix = createEmptyMatrix(width, height, emptyMark);
+  const emptyMatrix = createEmptyMatrix(width, height);
   const maxLength = width < height ? width : height;
   const corners = getCorners(maxLength, padd / 2);
   const matrixPattern = fillPatternInFirstQuadrant(
@@ -28,10 +27,11 @@ exports.draw = function(width, height, padd) {
  * @param {number} mark Integer representing pixel shape
  * @returns {array}
  */
-function createEmptyMatrix(width, height, mark) {
+function createEmptyMatrix(width, height) {
+  const emptyMark = 0;
   const matrix = [];
   for (let i = 0; i < height; i++) {
-    matrix.push(new Array(width).fill(mark));
+    matrix.push(new Array(width).fill(emptyMark));
   }
   return matrix;
 }
