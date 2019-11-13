@@ -40,3 +40,7 @@ Production build will be generated in `dist` folder.
 ## How to run unit testing
 
 Run `yarn test` in project root.
+
+## Big O notation
+
+Complexity: O(n²)
