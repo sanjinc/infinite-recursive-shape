@@ -10,6 +10,14 @@ Write a recursive method that creates an infinite rectangles.
 
 The approach taken generates one quarter of the result (top left) which is then mirrored horizontally and vertically.
 
+## Examples
+
+For end result check following screenshots:
+
+- [Width:20 / Height:40 / Padding:6](./screenshot-20-40-6.png)
+- [Width:20 / Height:60 / Padding:10](./screenshot-60-60-10.png)
+- [Width:20 / Height:80 / Padding:20](./screenshot-80-100-20.png)
+
 ## Prerequisites
 
 - [Node](https://nodejs.org)
