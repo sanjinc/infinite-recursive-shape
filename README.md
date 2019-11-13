@@ -1,4 +1,4 @@
-![](https://github.com/sanjnic/infinite-recursive-shape/workflows/Node%20CI/badge.svg)
+![](https://github.com/sanjinc/infinite-recursive-shape/workflows/Node%20CI/badge.svg)
 
 # Infinite recursive shape
 
